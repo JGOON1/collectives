@@ -1,0 +1,21 @@
+<p>data-display works!</p>
+
+<button (click)="getBooks()">getBooks</button>
+
+<div >
+    <table *ngFor="let book of books">
+        <tr>{{book.title}}</tr>
+        <tr>{{book.subtitle}}</tr>
+        <tr>{{book.author}}</tr>
+        <tr>{{book.publisher}}</tr>
+        <tr>{{book.pages}}</tr>
+        <tr>{{book.description}}</tr>
+        <tr>{{book.website}}</tr>
+        <tr>{{book.inCart}}</tr>
+        <tr>{{book.price}}</tr>
+        <tr>{{book.id}}</tr>
+    </table>
+    <div><h1>table of books</h1></div>
+</div>
+
+<br>
