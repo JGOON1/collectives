@@ -3,19 +3,19 @@
 <button (click)="getBooks()">getBooks</button>
 
 <div >
-    <table *ngFor="let book of books">
-        <tr>{{book.title}}</tr>
-        <tr>{{book.subtitle}}</tr>
-        <tr>{{book.author}}</tr>
-        <tr>{{book.publisher}}</tr>
-        <tr>{{book.pages}}</tr>
-        <tr>{{book.description}}</tr>
-        <tr>{{book.website}}</tr>
-        <tr>{{book.inCart}}</tr>
-        <tr>{{book.price}}</tr>
-        <tr>{{book.id}}</tr>
+    <table >
+            <tr *ngFor="let book of books">
+                <td>{{book.title}}</td>
+                <td>{{book.subtitle}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.publisher}}</td>
+                <td>{{book.pages}}</td>
+                <td>{{book.description}}</td>
+                <td>{{book.website}}</td>
+                <td>{{book.inCart}}</td>
+                <td>{{book.price}}</td>
+                <td>{{book.id}}</td>
+                <td><button click="deleteBook()">delete</button></td>
+            </tr> 
     </table>
-    <div><h1>table of books</h1></div>
 </div>
-
-<br>

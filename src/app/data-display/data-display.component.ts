@@ -18,9 +18,13 @@ export class DataDisplayComponent implements OnInit {
 
   getBooks() {
     this.book.newData().subscribe(data => {
-      console.log(data)
       this.books = data
+      console.log(data)
     })
+  }
+
+  deleteBook() {
+    console.log(this.book)
   }
 
 }
