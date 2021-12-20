@@ -9,7 +9,7 @@ import { Book } from './data-display.model'
 })
 export class DataDisplayComponent implements OnInit {
 
-  constructor(private book: CollectiveService) { }
+  constructor(private collectiveService: CollectiveService) { }
 
   ngOnInit(): void {
   }
@@ -17,14 +17,22 @@ export class DataDisplayComponent implements OnInit {
   books: Book[] = [];
 
   getBooks() {
-    this.book.newData().subscribe(data => {
+    this.collectiveService.newData().subscribe(data => {
       this.books = data
       console.log(data)
     })
   }
 
-  deleteBook() {
-    console.log(this.book)
-  }
+  deleteBook(id: number) {
+      this.collectiveService.onDelete(id)
+      // .subscribe(book => {
+      //   console.log(book)
+      //   this.collectiveService.getBooks().subscribe(books => this.books = books
 
+      // })
+
+    }
+  
 }
+
+
