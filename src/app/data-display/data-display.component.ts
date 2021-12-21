@@ -24,15 +24,21 @@ export class DataDisplayComponent implements OnInit {
   }
 
   deleteBook(id: number) {
-      this.collectiveService.onDelete(id)
-      // .subscribe(book => {
-      //   console.log(book)
-      //   this.collectiveService.getBooks().subscribe(books => this.books = books
+    console.log("deleted",id)
 
-      // })
+    this.collectiveService.onDelete(id).subscribe((res)=> {
+      console.log("deleted",id, res);
+      this.collectiveService.newData().subscribe(books => this.books = books)
+    })
 
-    }
+    // this.collectiveService.onDelete(id)
+    //   .subscribe(book => {
+    //     console.log(book)
+    //     this.collectiveService.newData().subscribe(books => this.books = books)
+    //   }
+  }
   
+
 }
 
 

@@ -15,7 +15,7 @@
                 <td>{{book.inCart}}</td>
                 <td>{{book.price}}</td>
                 <td>{{book.id}}</td>
-                <td><button click="deleteBook(book.id)">delete</button></td>
+                <td><button (click)="deleteBook(book.id)">delete</button></td>
             </tr> 
     </table>
 </div>

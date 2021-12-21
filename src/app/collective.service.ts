@@ -21,9 +21,9 @@ export class CollectiveService {
     return this.http.get(url)
   }
 
-  onDelete(id: number): Observable<any> {
-    const baseURL = "http://localhost:8082/api/books/"
-    return this.http.delete(`${baseURL}/${id}`)
+  onDelete(id: number) {
+    const baseURL = "http://localhost:8082/api/books/";
+    return this.http.delete(`${baseURL}${id}`)
 
   }
 }
