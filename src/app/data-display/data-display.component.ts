@@ -31,11 +31,6 @@ export class DataDisplayComponent implements OnInit {
       this.collectiveService.newData().subscribe(books => this.books = books)
     })
 
-    // this.collectiveService.onDelete(id)
-    //   .subscribe(book => {
-    //     console.log(book)
-    //     this.collectiveService.newData().subscribe(books => this.books = books)
-    //   }
   }
   
 

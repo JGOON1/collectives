@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Book } from './data-display/data-display.model';
-
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
+const baseURL = "http://localhost:8082/api/books/";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +13,9 @@ export class CollectiveService {
   constructor(private http:HttpClient) { 
   }
 
+  // create(data): Observable<any> {
+  //   return this.http.post(baseURL, data);
+  // }
 
 
   newData():Observable<any> {
@@ -22,7 +24,6 @@ export class CollectiveService {
   }
 
   onDelete(id: number) {
-    const baseURL = "http://localhost:8082/api/books/";
     return this.http.delete(`${baseURL}${id}`)
 
   }
